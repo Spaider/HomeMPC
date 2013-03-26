@@ -1,0 +1,25 @@
+﻿@model Libmpc.MpdDirectoryListing
+
+@{
+  Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Home MPC</title>
+  </head>
+  <body>
+    <div>
+      @foreach(var f in Model.DirectoryList)
+      {
+        <div>@f</div>
+      }
+      @foreach(var f in Model.FileList)
+      {
+        <div>@f.Title</div>
+      }
+    </div>
+  </body>
+</html>
