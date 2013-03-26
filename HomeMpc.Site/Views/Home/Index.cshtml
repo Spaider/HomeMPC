@@ -9,17 +9,13 @@
 <html>
   <head>
     <title>Home MPC</title>
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Resources/css/ext-all.css")">
+    <script type="text/javascript" src="~/extjs/ext-all-debug.js"></script>
+    <script type="text/javascript" src="~/app.js"></script>
   </head>
   <body>
     <div>
-      @foreach(var f in Model.DirectoryList)
-      {
-        <div>@f</div>
-      }
-      @foreach(var f in Model.FileList)
-      {
-        <div>@f.Title</div>
-      }
+
     </div>
   </body>
 </html>
