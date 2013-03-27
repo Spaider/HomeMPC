@@ -18,7 +18,7 @@
           title: 'Files',
           region: 'west',
           xtype: 'filetree',
-          width: 200,
+          width: 400,
           split: true,
           collapsible: true
         }]
