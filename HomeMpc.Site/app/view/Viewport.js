@@ -2,7 +2,8 @@
   extend: 'Ext.container.Viewport',
   layout: 'fit',
   requires: [
-    'HomeMPC.view.FileTree'
+    'HomeMPC.view.FileTree',
+    'HomeMPC.view.BodyView'
   ],
   initComponent: function() {
     this.items = {
@@ -11,8 +12,7 @@
       items: [{
           title: 'Center',
           region: 'center',
-          html: 'Center',
-          xtype: 'panel',
+          xtype: 'bodyview',
           layout: 'fit'
         }, {
           title: 'Files',

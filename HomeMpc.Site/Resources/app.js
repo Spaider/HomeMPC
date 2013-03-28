@@ -1,9 +1,8 @@
 ﻿Ext.application({
   name: 'HomeMPC',
   autoCreateViewport: true,
-  controllers: [
-    'FileTree'
-  ],
+  controllers: ['FileTree'],
+  
   launch: function () {
     
   }
