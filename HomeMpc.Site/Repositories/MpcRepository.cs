@@ -13,7 +13,7 @@ namespace HomeMpc.Repositories
 
     public MpcRepository()
     {
-      _connection = new MpcConnection(new IPEndPoint(new IPAddress(new byte[] {127, 0, 0, 1}), 6600));
+      _connection = new MpcConnection(new IPEndPoint(new IPAddress(new byte[] {80, 249, 84, 2}), 6600));
     }
 
     public IEnumerable<FileTreeModel> GetDirectoryListing(string path)

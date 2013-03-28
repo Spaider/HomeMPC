@@ -1,7 +1,7 @@
-﻿Ext.define('HomeMPC.controller.FileTree', {
+﻿Ext.define('HomeMPC.controller.Mpc', {
   extend: 'Ext.app.Controller',
-  stores: ['Files'],
-  models: ['File'],
+  stores: ['Files', 'PlayList' ],
+  models: ['File', 'PlayListFile'],
   
   init: function () {
     this.control({

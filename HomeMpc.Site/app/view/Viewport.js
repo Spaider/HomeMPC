@@ -3,16 +3,16 @@
   layout: 'fit',
   requires: [
     'HomeMPC.view.FileTree',
-    'HomeMPC.view.BodyView'
+    'HomeMPC.view.PlayList'
   ],
   initComponent: function() {
     this.items = {
       xtype : 'panel',
       layout: 'border',
       items: [{
-          title: 'Center',
+          title: 'Play list',
           region: 'center',
-          xtype: 'bodyview',
+          xtype: 'playlist',
           layout: 'fit'
         }, {
           title: 'Files',
