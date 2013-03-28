@@ -16,5 +16,10 @@ namespace HomeMpc.Controllers
     {           
       return Json(_repository.GetDirectoryListing(path), JsonRequestBehavior.AllowGet);
     }
+
+    public ActionResult Status()
+    {
+      return Json(_repository.GetStatus(), JsonRequestBehavior.AllowGet);
+    }
   }
 }

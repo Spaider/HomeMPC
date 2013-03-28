@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using HomeMpc.Models;
 using HomeMpc.Utils;
 using Libmpc;
@@ -13,7 +12,8 @@ namespace HomeMpc.Repositories
 
     public MpcRepository()
     {
-      _connection = new MpcConnection(new IPEndPoint(new IPAddress(new byte[] {80, 249, 84, 2}), 6600));
+      var mpcEndPoint = Toolbox.GetIPEndPointFromHostName(Toolbox.GetAppSettings<string>("MpcHost"), Toolbox.GetAppSettings<int>("MpcPort"));
+      _connection = new MpcConnection(mpcEndPoint);
     }
 
     public IEnumerable<FileTreeModel> GetDirectoryListing(string path)
@@ -56,6 +56,45 @@ namespace HomeMpc.Repositories
       try
       {
         return mpc.PlaylistInfo();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }
+
+    public MpdStatus GetStatus()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        return mpc.Status();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }
+
+    public void Stop()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Stop();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }    
+    
+    public void Play()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Play();
       }
       finally
       {

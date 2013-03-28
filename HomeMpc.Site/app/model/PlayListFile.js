@@ -1,6 +1,6 @@
 ﻿Ext.define('HomeMPC.model.PlayListFile', {
   extend: 'Ext.data.Model',
-  fields: ['Title', 'Album'],
+  fields: ['Id', 'Title', 'Album', 'Artist'],
   proxy: {
     type: 'ajax',
     url: 'Mpc/PlayList',

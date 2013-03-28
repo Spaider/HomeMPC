@@ -3,7 +3,8 @@
   layout: 'fit',
   requires: [
     'HomeMPC.view.FileTree',
-    'HomeMPC.view.PlayList'
+    'HomeMPC.view.PlayList',
+    'HomeMPC.view.ControlPanel'
   ],
   initComponent: function() {
     this.items = {
@@ -21,6 +22,12 @@
           width: 400,
           split: true,
           collapsible: true
+        }, {
+            region: 'north',
+            xtype: 'controlpanel',
+            collapsible: false,
+            height: 100,
+            html: '<div>Control panel comes here</div>'
         }]
     };
     this.callParent();
