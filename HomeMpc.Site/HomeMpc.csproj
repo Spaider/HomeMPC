@@ -97,6 +97,7 @@
     <Content Include="app\model\PlayListFile.js" />
     <Content Include="app\store\Files.js" />
     <Content Include="app\store\PlayList.js" />
+    <Content Include="app\view\ControlPanel.js" />
     <Content Include="app\view\FileTree.js" />
     <Content Include="app\view\PlayList.js" />
     <Content Include="app\view\Viewport.js" />

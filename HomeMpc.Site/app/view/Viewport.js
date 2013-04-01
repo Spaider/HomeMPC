@@ -25,9 +25,7 @@
         }, {
             region: 'north',
             xtype: 'controlpanel',
-            collapsible: false,
-            height: 100,
-            html: '<div>Control panel comes here</div>'
+            collapsible: false
         }]
     };
     this.callParent();
