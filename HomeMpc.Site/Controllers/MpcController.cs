@@ -21,5 +21,41 @@ namespace HomeMpc.Controllers
     {
       return Json(_repository.GetStatus(), JsonRequestBehavior.AllowGet);
     }
+
+    public ActionResult Play()
+    {
+      _repository.Play();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }
+
+    public ActionResult Pause()
+    {
+      _repository.Pause();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }    
+    
+    public ActionResult Stop()
+    {
+      _repository.Stop();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }
+
+    public ActionResult PlayNext()
+    {
+      _repository.PlayNext();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }    
+    
+    public ActionResult PlayPrevious()
+    {
+      _repository.PlayPrevious();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }
+
+    public ActionResult ClearPlaylist()
+    {
+      _repository.ClearPlaylist();
+      return Json("OK", JsonRequestBehavior.AllowGet);
+    }
   }
 }

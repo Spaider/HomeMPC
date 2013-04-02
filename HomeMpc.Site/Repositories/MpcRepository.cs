@@ -100,6 +100,58 @@ namespace HomeMpc.Repositories
       {
         mpc.Disconnect();
       }
+    } 
+    
+    public void Pause()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Pause(true);
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }
+
+    public void PlayNext()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Next();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }   
+    
+    public void PlayPrevious()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Previous();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }
+    }
+
+    public void ClearPlaylist()
+    {
+      var mpc = new Mpc {Connection = _connection};
+      try
+      {
+        mpc.Clear();
+      }
+      finally
+      {
+        mpc.Disconnect();
+      }      
     }
   }
 }
